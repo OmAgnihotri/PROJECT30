@@ -63,7 +63,8 @@ function draw(){
     background("black");
     Engine.update(engine);
     
-    
+    rope.display();
+
     ground.display();
   
     base1.display();
@@ -106,9 +107,4 @@ function mouseDragged(){
 }
 function mouseReleased(){
     rope.fly();
-}
-function keyPressed(){
-    if(keyCode===32){
-        rope.attach(polygon);
-    }
 }

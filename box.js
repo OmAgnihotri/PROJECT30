@@ -9,22 +9,26 @@ class Box{
     this.height=h;
     this.visiblity=255;
     }  
-    display(){
+  display(){
+    if(this.body.speed>3){
+      this.body.visiblity=this.body.visiblity-5;
+       World.remove(world,this.body);
+     }
+  else{
+    push ();
     var pos=this.body.position;   
     var angle=this.body.angle;
+
+    push ();
     translate(pos.x,pos.y)
     rotate (angle);
     fill("yellow");
     rectMode(CENTER);  
     rect(0,0,this.width,this.height);  
-    if(this.body.y<=450){
-      tint(255,this.visiblity);
-      this.visiblity=this.visiblity-5;
-     
-      
-    
-  
-    }
-  
+   
+
+  pop ();
+  }
     }  
+  
     }

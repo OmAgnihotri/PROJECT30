@@ -18,6 +18,7 @@ this.sling.bodyA=null;
         if(this.sling.bodyA){
         var pointA=this.sling.bodyA.position;
         var pointB=this.sling.pointB;
+        fill("white");
         strokeWeight(3);
         line(pointA.x,pointA.y,pointB.x,pointB.y);
         }
